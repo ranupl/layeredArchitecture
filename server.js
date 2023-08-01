@@ -1,17 +1,15 @@
 const express = require("express");
-const dotenv = require("dotenv").config();
+const ejs = require("ejs");
 const bodyparser = require("body-parser");
-const router = require("./src/routers/router")
-require("./src/database/connection")
+const route = require("./src/http/routes/router");
 const app = express();
-const PORT = process.env.PORT || 5000;
 
+const PORT = 4000;
 app.use(bodyparser.urlencoded({ extended: true }));
-app.use(express.static(__dirname + "/public"));
 app.set("view engine", "ejs");
 
-app.use("/", router);
+app.use("/", route);
 
-app.listen(PORT, () => {
+app.listen(PORT, () =>{
     console.log(`server is running at ${PORT}`);
 })

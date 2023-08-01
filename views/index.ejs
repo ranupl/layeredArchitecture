@@ -1,59 +1,13 @@
-<!-- header -->
-<%- include('includes/header.ejs') -%>
-<!-- /header -->
-
-<!-- section -->
-<div class="container">
-  <h1 class="text-center">Netflix Movies</h1>
-</div>
-
-<div class="container text-center">
-  <img src="../images/icons8-movie-64.png">
-</div>
-
-<div class="container">
-  <form action="/create" method="POST" onsubmit="formHandle()">
-    <div class="form-group">
-      <label for="name">Movie Name</label>
-      <input
-        type="text"
-        name="name"
-        placeholder="Movie name"
-        class="form-control"
-      />
-      </div>
-      <div class="form-group">
-      <label for="language">Language</label>
-      <input
-        type="text"
-        name="language"
-        placeholder="Movie language"
-        class="form-control"
-      />
-    </div>
-    <div class="from-group">
-      <label for="views">Views</label>
-      <input
-        type="number"
-        name="views"
-        placeholder="views"
-        class="form-control"
-      />
-    </div>
-    <div class="form-group">
-      <label for="likes">Likes</label>
-      <input
-        type="number"
-        name="likes"
-        placeholder="Likes"
-        class="form-control"
-      />
-    </div>
-    <button type="submit" class="btn btn-success mg-btm">Submit</button>
-  </form>
-</div>
-<!-- /section -->
-
-<!-- footer -->
-<%- include('includes/footer.ejs') -%>
-<!-- /footer -->
+<html>
+    <head>
+        <title>Architecture</title>
+    </head>
+    <body>
+        <form action="/submitForm" method="POST">
+            <label for="">Name</label><br>
+            <input type="text" name="name" placeholder="Your name">
+            <br><br>
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>

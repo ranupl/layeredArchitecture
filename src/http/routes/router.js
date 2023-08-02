@@ -1,9 +1,10 @@
 const express = require("express");
 const route = express.Router();
-const nameCon = require("../controllers/nameController")
-const nameServ = require("../../service/nameService")
+const nameCon = require("../controllers/nameController");
 
-// route.get("/", nameServ.home);
+route.get("/", (req, res) => {
+  res.render("index");
+});
 route.post("/submitForm", nameCon.create);
 
 module.exports = route;
